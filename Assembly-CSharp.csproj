@@ -62,10 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
     <Compile Include="Assets\Object_Position.cs" />
     <Compile Include="Assets\Scenes\Scripts\Camera_Control.cs" />
     <Compile Include="Assets\Scenes\Scripts\Object_Position.cs" />
     <Compile Include="Assets\Scenes\Scripts\Player_Controls.cs" />
+    <None Include="Assets\AllSkyFree\AllSkyFree_Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Utilizador/Documents/Unity Projects/Track ML/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

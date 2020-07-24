@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Controls : MonoBehaviour
 {
@@ -28,8 +29,9 @@ public class Player_Controls : MonoBehaviour
 
 
         position = new Vector3(moveH, 0.0f, moveV);
-        rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, 0);
+        rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, 0);
         rBody.AddForce (position * playerSpeed);
+
 
         if (transform.position.y < -1.5)
         {
@@ -47,11 +49,16 @@ public class Player_Controls : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Cube")
+        if (collision.gameObject.name == "Cube1" || collision.gameObject.name == "Cube2" || collision.gameObject.name == "Cube3")
         {
             transform.position = startPosition;
             transform.rotation = startRotation;
             rBody.velocity = Vector3.zero;
+        }
+
+        else if (collision.gameObject.name == "Platform3")
+        {
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
