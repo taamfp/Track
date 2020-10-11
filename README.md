@@ -1,4 +1,4 @@
-# Track-Obstacles
+# Track Obstacles Simulator
 
 Unity simulator for obstacle track.
 
